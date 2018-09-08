@@ -1,0 +1,7 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bonc.springboot_springsecurity_thymeleaf.mapper.LoginLogInfoMapper">
+   <insert id="saveLoginLogInfo" parameterType="com.bonc.springboot_springsecurity_thymeleaf.pojo.LoginLogInfo">
+       insert into sys_login_log_info values (#{id},#{loginName},#{loginTime},#{loginIp});
+   </insert>
+</mapper>

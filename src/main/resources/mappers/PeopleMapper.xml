@@ -1,0 +1,17 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bonc.springboot_springsecurity_thymeleaf.mapper.PeopleMapper">
+    <resultMap id="PeopleMap" type="com.bonc.springboot_springsecurity_thymeleaf.pojo.People">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <result property="sex" column="sex"></result>
+        <result property="age" column="age"></result>
+    </resultMap>
+    <select id="getPeopleById" parameterType="java.lang.Integer" resultMap="PeopleMap">
+        select * from sys_people_info where id = #{id}
+    </select>
+
+    <select id="getAll" resultMap="PeopleMap">
+        select * from sys_people_info
+    </select>
+</mapper>
